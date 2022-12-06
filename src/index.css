@@ -4,9 +4,8 @@
 
 :root {
     /* colors */
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0 0% 100%;
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-dark: hsl(230, 35%, 7%);
 
     /* font-sizes */
     --fs-400: 1rem;
@@ -69,8 +68,8 @@ p {
 body {
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
-    color: hsl(var(--clr-white));
-    background-color: hsl(var(--clr-dark));
+    color: var(--clr-white);
+    background-color: var(--clr-dark);
     line-height: 1.5;
     min-height: 100vh;
 
@@ -147,8 +146,8 @@ select {
 .skip-to-content {
     position: absolute;
     z-index: 9999;
-    background: hsl(var(--clr-white));
-    color: hsl(var(--clr-dark));
+    background: var(--clr-white);
+    color: var(--clr-dark);
     padding: 0.5em 1em;
     margin-inline: auto;
     transform: translateY(-100%);
@@ -157,26 +156,4 @@ select {
 
 .skip-to-content:focus {
     transform: translateY(0);
-}
-
-/* colors */
-.bg-dark {
-    background-color: hsl(var(--clr-dark));
-}
-.bg-accent {
-    background-color: hsl(var(--clr-light));
-}
-.bg-white {
-    background-color: hsl(var(--clr-white));
-}
-
-/* typography */
-.ff-serif {
-    font-family: var(--ff-serif);
-}
-.ff-sans-cond {
-    font-family: var(--ff-sans-cond);
-}
-.ff-sans-normal {
-    font-family: var(--ff-sans-normal);
 }
