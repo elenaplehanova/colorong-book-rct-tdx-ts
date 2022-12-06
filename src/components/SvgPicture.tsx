@@ -4,11 +4,10 @@ import { ReactComponent as Monkey } from "../assets/Monkey.svg";
 
 const Container = styled.div`
     width: 100%;
-    aspect-ratio: 1;
-
     @media (min-width: 35em) {
         width: 31.5rem;
     }
+    aspect-ratio: 1;
 `;
 interface IPictureSize {
     width: string;
