@@ -39,8 +39,8 @@ const selectedDiv = css`
 `;
 
 const ColorDiv = styled.div<ColorDivProps>`
-    width: 4rem;
-    height: 4rem;
+    width: 2.9rem;
+    height: 2.9rem;
     border-radius: 0.5rem;
 
     --color: ${({ color }) => color};

@@ -1,24 +1,25 @@
 import { Link, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import ColoringPicturePage from "./pages/ColoringPicturePage";
+import PictureGalleryPage from "./pages/PictureGalleryPage";
 
-const Ul = styled.ul`
+const Nav = styled.nav`
     display: flex;
     justify-content: center;
 
     gap: 2rem;
+    padding: 1rem;
 `;
 
 function App() {
     return (
         <main role="main">
-            <nav>
-                <Ul>
-                    <Link to="/">Home</Link>
-                    <Link to="/coloring_page/1">Coloring Page</Link>
-                </Ul>
-            </nav>
+            <Nav>
+                <Link to="/">Home</Link>
+                <Link to="/coloring_page/1">Coloring Page</Link>
+            </Nav>
             <Routes>
+                <Route path="/" element={<PictureGalleryPage />}></Route>
                 <Route path="/coloring_page/:id" element={<ColoringPicturePage />}></Route>
             </Routes>
         </main>
