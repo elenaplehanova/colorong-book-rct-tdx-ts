@@ -9,6 +9,8 @@ const Container = styled.div`
 
     gap: 0.2rem;
 
+    margin: auto;
+
     & > * {
         width: 8rem;
         height: 8rem;
@@ -18,14 +20,14 @@ const Container = styled.div`
             height: 10rem;
         }
 
-        @media (min-width: 45em) {
+        @media (min-width: 50em) {
             width: 14rem;
             height: 14rem;
         }
+    }
 
-        & > g > g > * {
-            fill: white;
-        }
+    @media (min-width: 50em) {
+        width: 80%;
     }
 `;
 
@@ -34,6 +36,9 @@ const pictures = Array(12).fill("");
 const PictureGalleryPage = () => {
     return (
         <Container>
+            <Monkey key={`Monkey`}></Monkey>
+            <Cat key={`Cat`}></Cat>
+
             {pictures.map((value, index) => {
                 return <Monkey key={`Monkey_${index}`}></Monkey>;
             })}

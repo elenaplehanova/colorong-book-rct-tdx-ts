@@ -66,6 +66,16 @@ const ColorDiv = styled.div<ColorDivProps>`
             filter: drop-shadow(0 0 0.5rem var(--clr-white));
         }
     }
+
+    @media (min-width: 50em) {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    @media (min-width: 100em) {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
 `;
 
 const ColorsPalette: FC = () => {
