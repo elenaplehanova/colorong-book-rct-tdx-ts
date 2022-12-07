@@ -7,6 +7,14 @@ const Container = styled.div`
     @media (min-width: 35em) {
         width: 31.5rem;
     }
+
+    @media (min-width: 50em) {
+        width: 34.5rem;
+    }
+
+    @media (min-width: 100em) {
+        width: 40.5rem;
+    }
     aspect-ratio: 1;
 `;
 interface IPictureSize {
