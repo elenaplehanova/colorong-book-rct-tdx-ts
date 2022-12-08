@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useAppSelector } from "../hooks/redux";
-import SvgAsReactFC from "./SvgAsReactFC";
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import { pictureSlice } from "../store/reducers/PictureSlice";
+import SvgPicture from "./SvgPicture";
 
 const Container = styled.div`
     width: 100%;
@@ -20,12 +21,28 @@ const Container = styled.div`
 `;
 
 const Picture = () => {
-    const { idCurrentPicture } = useAppSelector((state) => state.pictureReducer);
+    const { currentColor } = useAppSelector((state) => state.colorReducer);
+
+    const { pictures, idCurrentPicture } = useAppSelector((state) => state.pictureReducer);
+    const { updatePictureShape } = pictureSlice.actions;
+    const dispatch = useAppDispatch();
+
+    const currentPicture = pictures.find((item) => item.id === idCurrentPicture);
+
+    const clickHandler = (index: number) => {
+        if (currentPicture) {
+            let newShapes = [...currentPicture.shapes];
+            newShapes[index] = { ...newShapes[index], fill: currentColor };
+
+            let newPicture = { ...currentPicture, shapes: newShapes };
+            dispatch(updatePictureShape(newPicture));
+        }
+    };
 
     return (
         <Container id="svg_container">
-            {idCurrentPicture ? (
-                <SvgAsReactFC></SvgAsReactFC>
+            {currentPicture ? (
+                <SvgPicture picture={currentPicture} clickHandler={clickHandler}></SvgPicture>
             ) : (
                 <>
                     <h1>Picture don't selected</h1>

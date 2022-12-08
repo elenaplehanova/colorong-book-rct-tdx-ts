@@ -1,4 +1,4 @@
-import { IColor } from "./models/IColor";
+import { IColor } from "../../models/IColor";
 
 export const dark: IColor = {
     name: "dark",
