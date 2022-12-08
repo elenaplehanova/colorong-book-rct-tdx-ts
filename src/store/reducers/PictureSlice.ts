@@ -1,5 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { cat, monkey } from "../../assets/map/svgPictures";
 import { IPicture } from "../../models/IPicture";
+import { ISvgPicture } from "../../models/ISvgPicture";
+
+export const svgPictureMap: ISvgPicture[] = [monkey, cat];
 
 interface PictureState {
     idCurrentPicture: string;

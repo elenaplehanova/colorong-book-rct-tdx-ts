@@ -13,7 +13,7 @@ import {
     violet,
     white,
     yellow,
-} from "../../colors";
+} from "../../assets/map/colors";
 
 export const mapColors: IColor[] = [
     white,
