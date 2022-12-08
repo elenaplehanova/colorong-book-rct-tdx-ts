@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { MouseEvent } from "react";
 import { IShape } from "../models/IShape";
 import { useAppDispatch } from "../hooks/redux";
-import { pictureSlice, svgPictureMap } from "../store/reducers/PictureSlice";
+import { pictureSlice } from "../store/reducers/PictureSlice";
 import { IPicture } from "../models/IPicture";
 import { useNavigate } from "react-router-dom";
 import { clearwhite } from "../assets/map/colors";
+import { svgPictureMap } from "../assets/map/svgPictures";
 
 const Container = styled.div`
     display: flex;
