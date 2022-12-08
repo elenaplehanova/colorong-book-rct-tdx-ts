@@ -1,8 +1,9 @@
 import { FC } from "react";
 import styled, { css } from "styled-components";
+import { colorMap } from "../assets/map/colors";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import { IColor } from "../models/IColor";
-import { colorSlice, mapColors } from "../store/reducers/ColorSlice";
+import { colorSlice } from "../store/reducers/ColorSlice";
 
 const PaletteDiv = styled.div`
     display: grid;
@@ -77,7 +78,7 @@ const ColorsPalette: FC = () => {
 
     return (
         <PaletteDiv>
-            {mapColors.map((color, index) => {
+            {colorMap.map((color, index) => {
                 return (
                     <ColorDiv
                         key={index}

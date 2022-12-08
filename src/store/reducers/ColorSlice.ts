@@ -1,34 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { white } from "../../assets/map/colors";
 import { IColor } from "../../models/IColor";
-import {
-    aquamarine,
-    blue,
-    darkgray,
-    lightblue,
-    limegreen,
-    magenta,
-    orange,
-    pink,
-    red,
-    violet,
-    white,
-    yellow,
-} from "../../assets/map/colors";
-
-export const mapColors: IColor[] = [
-    white,
-    darkgray,
-    limegreen,
-    aquamarine,
-    lightblue,
-    blue,
-    violet,
-    pink,
-    magenta,
-    red,
-    orange,
-    yellow,
-];
 
 interface ColorState {
     currentColor: IColor;

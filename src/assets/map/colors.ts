@@ -69,3 +69,18 @@ export const yellow: IColor = {
     name: "yellow",
     hsl: "51 100% 64%",
 };
+
+export const colorMap: IColor[] = [
+    white,
+    darkgray,
+    limegreen,
+    aquamarine,
+    lightblue,
+    blue,
+    violet,
+    pink,
+    magenta,
+    red,
+    orange,
+    yellow,
+];
