@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import ColorsPalette from "../components/ColorsPalette";
-import SvgPicture from "../components/SvgPicture";
+import Picture from "../components/Picture";
 
 const Container = styled.div`
     display: flex;
@@ -21,7 +21,7 @@ const ColoringPicturePage: FC = () => {
     return (
         <Container>
             <ColorsPalette />
-            <SvgPicture />
+            <Picture />
         </Container>
     );
 };

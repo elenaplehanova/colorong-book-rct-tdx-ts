@@ -1,20 +1,8 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import styled, { css } from "styled-components";
-
-const colors = [
-    "200 10% 94%",
-    "193 8% 23%",
-    "79 51% 54%",
-    "175 92% 38%",
-    "207 59% 62%",
-    "218 72% 45%",
-    "267 48% 44%",
-    "323 76% 57%",
-    "300 100% 35%",
-    "3 100% 46%",
-    "28 80% 57%",
-    "51 100% 64%",
-];
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import { IColor } from "../models/IColor";
+import { colorSlice, mapColors } from "../store/reducers/ColorSlice";
 
 const PaletteDiv = styled.div`
     display: grid;
@@ -79,21 +67,23 @@ const ColorDiv = styled.div<ColorDivProps>`
 `;
 
 const ColorsPalette: FC = () => {
-    const [selectedColor, setSelectedColor] = useState<string>(colors[0]);
+    const { currentColor } = useAppSelector((state) => state.colorReducer);
+    const { setCurrentColor } = colorSlice.actions;
+    const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        console.log(selectedColor);
-    }, [selectedColor]);
+    const clickHandler = (color: IColor) => {
+        dispatch(setCurrentColor(color));
+    };
 
     return (
         <PaletteDiv>
-            {colors.map((color, index) => {
+            {mapColors.map((color, index) => {
                 return (
                     <ColorDiv
                         key={index}
-                        color={color}
-                        onClick={() => setSelectedColor(color)}
-                        isSelected={selectedColor === color}
+                        color={color.hsl}
+                        onClick={() => clickHandler(color)}
+                        isSelected={currentColor.name === color.name}
                     ></ColorDiv>
                 );
             })}
