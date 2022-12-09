@@ -21,6 +21,7 @@ const Nav = styled.nav`
 
         &[aria-disabled="true"] {
             pointer-events: none;
+            opacity: 0.5;
         }
 
         @media (min-width: 35em) {
