@@ -15,7 +15,7 @@ const Container = styled.div`
 
     gap: 0.2rem;
 
-    margin: auto;
+    margin: auto 1rem;
 
     & > * {
         width: 8rem;
@@ -29,6 +29,16 @@ const Container = styled.div`
         @media (min-width: 50em) {
             width: 14rem;
             height: 14rem;
+        }
+
+        @media (hover) {
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 15px var(--clr-dark);
+                transition: all 0.2s;
+
+                transform: scale(1.05);
+            }
         }
     }
 
