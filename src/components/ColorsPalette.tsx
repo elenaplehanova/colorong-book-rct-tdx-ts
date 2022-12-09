@@ -41,19 +41,16 @@ const ColorDiv = styled.div<ColorDivProps>`
         }
     }};
 
-    &:focus,
-    &:hover {
-        cursor: pointer;
+    @media (hover) {
+        &:hover {
+            cursor: pointer;
+            filter: drop-shadow(0 0 0.5rem var(--clr-white));
+        }
     }
 
     @media (min-width: 35em) {
         width: 5rem;
         height: 5rem;
-
-        &:focus,
-        &:hover {
-            filter: drop-shadow(0 0 0.5rem var(--clr-white));
-        }
     }
 
     @media (min-width: 50em) {

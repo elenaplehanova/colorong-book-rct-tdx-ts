@@ -9,6 +9,7 @@ interface PathProps {
 const Path = styled.path<PathProps>`
     --color: ${({ fillColor }) => fillColor.hsl};
     fill: hsl(var(--color));
+    cursor: pointer;
 `;
 
 interface SvgPictureProps extends React.SVGProps<SVGSVGElement> {

@@ -24,8 +24,7 @@ const Nav = styled.nav`
             opacity: 0.5;
         }
 
-        @media (min-width: 35em) {
-            &:focus,
+        @media (hover) {
             &:hover {
                 cursor: pointer;
                 filter: drop-shadow(0 0 0.5rem var(--clr-white));
