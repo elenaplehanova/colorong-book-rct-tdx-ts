@@ -10,7 +10,7 @@ const Container = styled.div`
     flex-direction: column;
 
     gap: 1rem;
-    padding: 1rem;
+    margin: 1rem;
 
     @media (min-width: 35em) {
         flex-direction: row;
