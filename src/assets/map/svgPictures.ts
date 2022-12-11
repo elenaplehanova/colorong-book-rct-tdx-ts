@@ -5,6 +5,10 @@ import { ReactComponent as Bunny } from "../img/Bunny.svg";
 import { ReactComponent as Sheep } from "../img/Sheep.svg";
 import { ReactComponent as Bird } from "../img/Bird.svg";
 import { ReactComponent as Dog } from "../img/Dog.svg";
+import { ReactComponent as Xmas_tree } from "../img/Xmas_tree.svg";
+import { ReactComponent as Dolphin } from "../img/Dolphin.svg";
+import { ReactComponent as Bear } from "../img/Bear.svg";
+import { ReactComponent as Fox } from "../img/Fox.svg";
 
 import { ISvgPicture } from "../../models/ISvgPicture";
 
@@ -43,4 +47,36 @@ export const dog: ISvgPicture = {
     component: Dog,
 };
 
-export const svgPictureMap: ISvgPicture[] = [monkey, cat, froggy, bunny, bird, sheep, dog];
+export const xmas_tree: ISvgPicture = {
+    id: "xmas_tree",
+    component: Xmas_tree,
+};
+
+export const dolphin: ISvgPicture = {
+    id: "dolphin",
+    component: Dolphin,
+};
+
+export const bear: ISvgPicture = {
+    id: "bear",
+    component: Bear,
+};
+
+export const fox: ISvgPicture = {
+    id: "fox",
+    component: Fox,
+};
+
+export const svgPictureMap: ISvgPicture[] = [
+    monkey,
+    cat,
+    froggy,
+    bunny,
+    bird,
+    sheep,
+    dog,
+    xmas_tree,
+    dolphin,
+    bear,
+    fox,
+];
