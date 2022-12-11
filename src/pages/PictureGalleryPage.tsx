@@ -15,7 +15,7 @@ const Container = styled.div`
 
     gap: 0.2rem;
 
-    margin: auto 1rem;
+    margin: 1rem auto;
 
     & > * {
         width: 8rem;
