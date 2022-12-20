@@ -1,3 +1,8 @@
+# What is it?
+
+This project is coloring book. You can select any picture in app and color it as you want. Project is based on coloring svg paths. When user click on path its change value for property "fill".
+You can play with this project as writed below or you can check it up on [vercel](https://colorong-book-rct-tdx-ts.vercel.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
