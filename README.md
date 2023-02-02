@@ -1,8 +1,6 @@
 # Coloring book / Раскраска
 
-Frontend приложение - раскраска.
-<br>
-This project is coloring book.
+Frontend приложение - раскраска. 
 
 # Tech stack / Стек технологий
 * TypeScript
